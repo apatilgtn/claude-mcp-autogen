@@ -1,13 +1,11 @@
+# src/api/routers/auth.py
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
-from datetime import timedelta
 
 from src.api.dependencies import authenticate_user, create_access_token, Token
 
-router = APIRouter(
-    prefix="/api/auth",
-    tags=["auth"]
-)
+# Remove the duplicate prefix
+router = APIRouter(tags=["auth"])
 
 @router.post("/token", response_model=Token)
 async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends()):
