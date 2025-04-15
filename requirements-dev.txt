@@ -1,27 +1,23 @@
-# Core dependencies
-fastapi>=0.103.0
-uvicorn>=0.23.2
-pydantic>=2.3.0
-python-dotenv>=1.0.0
-anthropic>=0.6.0
-pyautogen>=0.2.0
-redis>=5.0.0
+# Include all production dependencies
+-r requirements.txt
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.1
+pytest-cov>=4.1.0
 httpx>=0.24.1
-sqlalchemy>=2.0.20
-alembic>=1.12.0
-asyncio>=3.4.3
-jinja2>=3.1.2
-python-jose>=3.3.0
-passlib>=1.7.4
-bcrypt>=4.0.1
-tenacity>=8.2.3
-pyyaml>=6.0.1
 
-# UI dependencies
-streamlit>=1.26.0
-streamlit-chat>=0.1.1
+# Linting and formatting
+black>=23.7.0
+isort>=5.12.0
+flake8>=6.1.0
+mypy>=1.5.1
 
-# Utility dependencies
-loguru>=0.7.0
-python-multipart>=0.0.6
-aiofiles>=23.1.0
+# Documentation
+mkdocs>=1.5.2
+mkdocs-material>=9.2.5
+
+# Development tools
+pre-commit>=3.3.3
+ipython>=8.14.0
+watchdog>=3.0.0
